@@ -27,8 +27,8 @@ object = { version = "0.32", default-features = false, features = [
 thiserror = { version = "1", default-features = false }
 
 [dev-dependencies]
-assert_matches = { workspace = true }
-rbpf = { workspace = true }
+assert_matches = { version = "1.5.0", default-features = false }
+rbpf = { version = "0.2.0", default-features = false }
 
 [features]
 std = []
