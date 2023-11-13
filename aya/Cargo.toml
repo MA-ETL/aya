@@ -16,7 +16,7 @@ assert_matches = { workspace = true }
 async-io = { workspace = true, optional = true }
 aya-obj = { workspace = true, features = ["std"] }
 bitflags = { workspace = true }
-bytes = { workspace = true }
+bytes = "1.4.0"
 lazy_static = { workspace = true }
 libc = { workspace = true }
 log = { workspace = true }
