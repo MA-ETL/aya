@@ -12,17 +12,29 @@ edition = "2021"
 rust-version = "1.66"
 
 [dependencies]
-assert_matches = { workspace = true }
-async-io = { workspace = true, optional = true }
-aya-obj = { workspace = true, features = ["std"] }
-bitflags = { workspace = true }
+assert_matches = { version = "1.5.0", default-features = false }
+async-io = { version = "2.0", default-features = false, optional = true }
+#aya-obj = { workspace = true, features = ["std"] }
+aya-obj = { path = "../aya-obj", version = "0.1.0", default-features = false, features = [
+    "std",
+] }
+bitflags = { version = "2.2.1", default-features = false }
 bytes = "1.4.0"
-lazy_static = { workspace = true }
-libc = { workspace = true }
-log = { workspace = true }
-object = { workspace = true, features = ["elf", "read_core", "std"] }
-thiserror = { workspace = true }
-tokio = { workspace = true, features = ["rt"], optional = true }
+lazy_static = { version = "1", default-features = false }
+libc = { version = "0.2.105", default-features = false }
+log = { version = "0.4", default-features = false }
+#object = { workspace = true, features = ["elf", "read_core", "std"] }
+object = { version = "0.32", default-features = false, features = [
+    "elf",
+    "read_core",
+    "std",
+] }
+#thiserror = { workspace = true }
+thiserror = { version = "1", default-features = false }
+#tokio = { workspace = true, features = ["rt"], optional = true }
+tokio = { version = "1.24.0", default-features = false, features = [
+    "rt",
+], optional = true }
 
 [dev-dependencies]
 tempfile = { workspace = true }
