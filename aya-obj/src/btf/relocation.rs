@@ -945,6 +945,9 @@ impl ComputedRelocation {
             return Ok(());
         };
 
+        std::println!("apply - ins.code = {}", ins.code);
+        std::println!("apply - target.size = {}", target.size);
+
         let class = (ins.code & 0x07) as u32;
 
         let target_value = target.value;
